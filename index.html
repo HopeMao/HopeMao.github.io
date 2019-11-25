@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<!-- 339 portfloio -->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Hope Mao </title>
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Baloo|Quicksand|Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151638799-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-151638799-1');
+      </script>
+
+</head>
+
+<body>
+  <main>
+  <div class="skipcont"><a tabindex="1" href="#about">Skip to Main Content</a></div>
+
+  <div id = "nav" class = "nav">
+    <nav>
+        <div class="nav-links">
+        <!-- how to make my logo relative to the size? -->
+        <a class="page-scroll" tabindex="1" href="#home"><img class="logo" src="images/logo.png" alt="Hope Mao homepage UX data design" /></a>
+        <a class="page-scroll" tabindex="1" href="#about">About</a>
+        <a class="page-scroll" tabindex="1" href="#work">Work</a>
+        <a class="page-scroll" tabindex="1" href="#contact">Contact</a>
+        <a class="page-scroll" tabindex="1" href="#resume">Resume</a>
+
+        </div>
+    </nav>
+  </div>
+
+<div class="container">
+
+  <div id = "maincontent" class = "active" >
+      <button type="button" class ="fas fa-angle-right" value = "closed" id="navbutton" tabindex="1" aria-label="navigation arrow pointing right" aria-hidden= "false" > </button>
+        <div id = "home" class = "active">
+          <div class = "homecontent ">
+              <h1> Hello, I'm</h1>
+              <h2 class = "scale-in-left">Hope Mao</h2>
+              <p class="bg-titlesub"> I'm an aspiring UX Designer</p>
+          <div id = "navbutton2"> <i class="fas fa-angle-left" aria-label="navigation arrow pointing left"></i> </div>
+          </div>
+      </div>
+
+
+    <div id= "about">
+        <h3> About Me </h3>
+          <p>I'm a sophomore at the University of Michigan, studying User Experience and product design. In my free time, I enjoy creating digital illustrations/designs, dancing, and creating music.
+          <br>
+          I come from a multidisciplinary background with interests in programming and design.</p>
+    </div>
+
+    <div id= "about-img">
+      <img class= "about-image" src="./images/about.png" alt="Profile picture of Hope Mao" />
+
+      <!-- <div class="flip-card" id= "about-img">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img class= "about-image" src="./images/about.png" alt="Profile picture of Hope Mao" /></img>
+          </div>
+          <div class="flip-card-back">
+            <h1> Hope Mao</h1>
+            <p>Sophomore</p>
+            <p>University of Michigan</p>
+          </div>
+        </div>
+      </div> -->
+
+    </div>
+
+    <div id = "work">
+      <h4> Work </h4>
+    </div>
+
+    <div id = "work2">
+      <div id= "workimg">
+        <div class = "img1" >
+          <a href = "mynest.html" tabindex="2"> Mynest- roommate app design </a>
+        </div>
+
+        <!-- <div>
+          <p> some text </p>
+          <a href = "mynest.html"> <img class= "image3" tabindex="2" src="images/tasksmall.jpg" alt="thumbnail for UX case study"></a>
+        </div> -->
+        <div class= "img3">
+        <a href = "wmg.html" tabindex="2"> Wolverine Media Group Webdes </a>
+        </div>
+
+        <div class= "img2">
+        <a href = "gdes.html" tabindex="2"> Graphic Design </a>
+        </div>
+
+        <div class= "img4">
+        <a href = "flickr.html" tabindex="2"> Flickr UX Study </a>
+        </div>
+
+        <div class= "img5">
+        <a href = "illustration.html" tabindex="2"> Illustration </a>
+        </div>
+
+
+
+      </div>
+
+    </div>
+
+
+      <div id= "contact" class ="contact">
+        <h5> I’d love to hear from you </h5>
+        <p> If you have any questions for me or my projects,<br>
+          please to get in touch! </p>
+        <p> I'm seeking opportunities to learn more about
+          the intersection between human computer interaction, and product design.</p>
+          <p class="email">
+          <a href="mailto:hopemao@umich.edu">hopemao@umich.edu</a>
+          </p>
+          <div class ="social">
+            <a class="socialbar" href="https://www.instagram.com/carivory/" target="_blank" alt="Art Instagram link"> <i class="fab fa-instagram"></i></a>
+            <a class="socialbar" href="https://www.linkedin.com/in/hope-mao-10525b174/" target="_blank" alt="LinkedIn link"><i class="fab fa-linkedin"></i></a>
+            <a class="socialbar" href="https://www.behance.net/hmao19ad" target="_blank" alt="Behance link"><i class="fab fa-behance"></i></a>
+          </div>
+        </div>
+          <!--  -->
+          <form id = "form" class="contact" action= "https://formspree.io/mvopejqj" method="POST">
+            <!-- action= "https://formspree.io/hopemao@umich.edu" methos-"POST" -->
+              <fieldset>
+                  <!-- <legend class="text-center header">Your Contact Information</legend>// -->
+
+                  <div class="form-group">
+                      <span><i class="fa fa-user bigicon" aria-label="Name icon"></i></span>
+                      <div>
+                        <label> First Name:
+                          <input id="fname" name="name" type="text" placeholder="First Name" class="form-control">
+                        </label>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <div>
+                        <label> Last Name:
+                          <input id="lname" name="name" type="text" placeholder="Last Name" class="form-control">
+                        </label>
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                      <span><i class="fa fa-paper-plane bigicon" aria-label="email icon"></i></span>
+                      <div>
+                        <label> Your Email:
+                          <input id="email" name="email" type="text" placeholder="Email Address" class="form-control">
+                        </label>
+                      </div>
+                  </div>
+
+                  <!-- <div class="form-group">
+                      <span><i class="fa fa-phone-square bigicon"></i></span>
+                      <div>
+                        <label> Phone Number:
+                          <input id="phone" name="phone" type="text" placeholder="Phone" class="form-control">
+                      </div>
+                  </div> -->
+
+                  <div class="form-group">
+                      <span><i class = "fas fa-pencil-alt bigicon" aria-label="short message icon"></i></span>
+                      <div>
+                        <label> Message:
+                          <textarea class="form-control" id="message" name="message" placeholder="Leave a message!"></textarea>
+                        </label>
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                      <div>
+                          <button type="submit" class="btnsubmit" >Submit</button>
+                          <!-- bootstrap uses button -->
+                      </div>
+                  </div>
+              </fieldset>
+          </form>
+          <!--  -->
+      <!-- </div> -->
+
+      <div id= "resume">
+        <h6> Resume </h6>
+        <div class = "resumeframe">
+        <iframe src="images/resume.pdf" title="Hope Mao's Resume" ></iframe>
+        </div>
+      </div>
+
+      <footer id = "footer">
+        <!-- <footer> -->
+        <div class="head">
+          <p>Hope Mao</p> <br/>
+        </div>
+            <div class="details">
+            <!-- <p> hopemao@umich.edu </p> -->
+            <p class="email">
+            <a href="mailto:hopemao@umich.edu">hopemao@umich.edu</a>
+            </p>
+
+            </div>
+          <div class ="social">
+            <a class="socialbar" href="https://www.instagram.com/carivory/" target="_blank" alt="Art Instagram link"> <i class="fab fa-instagram"></i></a>
+            <a class="socialbar" href="https://www.linkedin.com/in/hope-mao-10525b174/" target="_blank" alt="LinkedIn link"><i class="fab fa-linkedin"></i></a>
+            <a class="socialbar" href="https://www.behance.net/hmao19ad" target="_blank" alt="Behance link"><i class="fab fa-behance"></i></a>
+          </div>
+        <!-- </footer> -->
+      </footer>
+
+  </div>
+
+
+</div>
+</main>
+
+<script src = "js/script2.js" type="text/javascript"></script>
+<!-- <script src= "js/animation.js" type="text/javascript"></script> -->
+<script src="https://kit.fontawesome.com/ef3bafbfbf.js"></script>
+
+</body>
+
+</html>

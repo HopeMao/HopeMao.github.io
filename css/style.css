@@ -1,0 +1,913 @@
+
+/* sidenav links:
+https://www.w3schools.com/howto/howto_js_sidenav.asp
+https://www.w3schools.com/css/css_navbar.asp */
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  font-size: 22px;
+}
+
+body {
+margin: 0;
+font-family: 'Quicksand', sans-serif;
+}
+
+/* ***accidentally made an extra container. */
+/* .container {
+  display: grid;
+  grid-template-columns: 33% auto 33%;
+  grid-template-rows: 1/5fr 1/5fr 1/5fr 1/5fr 1/5fr;
+  transition: margin-left .5s;
+} */
+
+
+/* this is technically my "container" */
+#maincontent {
+  display: grid;
+  grid-template-columns: 25% auto auto 25%;
+  /* grid-template-rows: 1/5fr 1/5fr 1/5fr 1/5fr 1/5fr; */
+  grid-template-rows: 100vh auto auto auto auto 100vh auto auto auto;
+  transition: margin-left .5s;
+}
+
+.skipcont a{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+  -webkit-transition: top 0.3s ease-out;
+  transition: top 0.3s ease-out;
+  z-index: 1;
+}
+
+.skipcont a:focus {
+  position: absolute;
+  top: 0px;
+  color: #5279c3;
+}
+
+.nav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #e1e9ee;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 20px;
+}
+
+.nav a {
+  padding: 8px 8px 8px 8px;
+  text-decoration: none;
+  font-size: 24px;
+  color: #354b57;
+  display: block;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.nav a:hover {
+  color: #006dec;
+}
+
+.active {
+  background-color: white;
+}
+
+.inactive {
+  background-color: transparent;
+}
+
+.page-scroll:focus  {
+  openNav();
+}
+
+#navbutton {
+  z-index: 3;
+  border: none;
+  background: #c1d7e4;
+  padding: 0;
+  transition: 0.5s;
+  font-size:30px;
+  cursor:pointer;
+  display: block;
+  position: fixed;
+  top: 47%;
+  left: 0%;
+  width: 35px;
+  height: 40px;
+  value: "closed";
+}
+
+#navbutton:focus, #navbutton:hover {
+  background: black;
+  color: #c1d7e4;
+  z-index: 2;
+  outline: 0;
+}
+
+#navbutton2 {
+  transition: 0.5s;
+  font-size:30px;
+  cursor:pointer;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 0.5%;
+  width: 48px;
+  height: 36px;
+}
+
+.nav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.logo{
+  width: 100%;
+  height: auto;
+  padding-bottom: 20px;
+}
+
+#home {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  background: #ffffff url("../images/topb.jpg") center center;
+
+  background-attachment: fixed;
+
+  background-size: cover;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
+  /* padding-top: 5%; */
+  padding-left: 15%;
+}
+
+#home h1, #home p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 40px;
+  padding: 10px;
+}
+#home h1{
+  margin-top: 8%;
+}
+#home h2 {
+  font-family: 'Sedgwick Ave Display', cursive;
+  font-size: 150px;
+  letter-spacing: 7px;
+  margin: 0;
+  padding-bottom: 10px;
+  margin: auto;
+  background: transparent;
+  /* text-shadow:
+  4px 4px 0px #d5d5d5,
+  7px 7px 0px rgba(0, 0, 0, 0.2); */
+}
+
+/* .scale-in-left {
+  -webkit-animation: scale-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+} */
+
+@-webkit-keyframes scale-in-left {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+    opacity: 1;
+  }
+}
+@keyframes scale-in-left {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+    opacity: 1;
+  }
+}
+
+
+#about {
+  grid-column: 1/3;
+  grid-row: 2/3;
+  height: 100vh;
+  margin: 10%;
+  padding-top: 15%;
+  /* nicer looking than margin */
+}
+
+#about-img{
+  grid-row: 2/ 3;
+  grid-column: 3/ 5;
+  text-align: center;
+  margin-top: 40%;
+  margin-right: 5%;
+
+}
+.about-image {
+  width: 100%;
+  height: auto;
+  margin: 0, auto;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: auto;
+  margin: 0, auto;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0, auto;
+  max-height: 250px;
+
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  margin: 0, auto;
+
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: transparent;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: black;
+  transform: rotateY(180deg);
+}
+
+
+#about h3, h4, #contact h5, #resume h6 {
+  font-family: 'Sedgwick Ave Display', cursive;
+  font-size: 48px;
+  letter-spacing: 5px;
+  margin: 20px;
+}
+
+#contact h5 {
+  margin-bottom: 0;
+}
+
+#work {
+  grid-row: 3/4;
+
+}
+
+#work2 {
+  grid-column: 1/-1;
+  grid-row: 4/5;
+  transition: margin-left .5s;
+  background-color: #f0efef;
+  height: 100vh;
+  margin: 5px;
+  padding-top: 5%;
+}
+
+#workimg {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+          justify-content: center;
+  min-height: 500px;
+  max-height: 700px;
+  overflow-y: auto;
+}
+
+#work h4 {
+  margin-left: 50px;
+}
+#workimg {
+  margin-left: 35px;
+  margin-right: 35px;
+}
+#workimg > img {
+  max-height: 300px;
+}
+#workimg a {
+  max-height: 300px;
+}
+#workimg a img {
+  max-height: 300px;
+}
+#workimg div {
+  max-height: 300px;
+}
+#workimg p {
+  position: absolute;
+  opacity: 0;
+  text-align: center;
+  color: white;
+}
+#workimg p:hover {
+  position: absolute;
+  opacity: 1;
+  text-align: center;
+  color: white;
+}
+
+#workimg .img1 {
+  background: url("../images/tasksmall.jpg");
+  height: 300px;
+  width: 300px;
+  background-size: cover;
+  background-position: center;
+}
+#workimg .img2 {
+  background: url("../images/saselogo.jpg");
+  height: 300px;
+  width: 300px;
+  background-size: cover;
+  background-position: center;
+}
+#workimg .img3 {
+  background: url("../images/wmglogo.png");
+  height: 300px;
+  width: 300px;
+  background-size: cover;
+  background-position: center;
+}
+#workimg .img4 {
+  background: url("../images/ux.png");
+  height: 300px;
+  width: 300px;
+  background-size: cover;
+  background-position: center;
+}
+#workimg .img5 {
+  background: url("../images/joyful.jpg");
+  height: 300px;
+  width: 300px;
+  background-size: cover;
+  background-position: center;
+}
+
+
+#workimg a {
+  display: inline-block;
+  opacity: 0;
+  height: 300px;
+  width: 300px;
+}
+#workimg a:hover, #workimg a:focus {
+  display: table-cell;
+  opacity: 1;
+  z-index: 10;
+  color: white;
+  font-size: 35px;
+  text-decoration: none;
+  vertical-align: middle;
+  text-align: center;
+  line-height:50px;
+  background-color: rgba(0, 0, 0, 0.6);
+
+}
+#workimg .img1:hover {
+  background: rgba(#000000, 0.49);
+}
+
+/* images as background image
+link in paragraoh?
+Make the whole things an a, make text inside the a:
+make a opacity changed
+set the height and width of a the save as div.
+ */
+#workimg div:hover {
+  background-color: blackrgba(#000000, 0.49);
+}
+
+#workimg > div a img:hover, #workimg > div a img:focus{
+  filter: drop-shadow(4px 4px 5px black);
+  filter: brightness(0.3);
+}
+
+
+#contact {
+  grid-row: 5/6;
+  grid-column: 1/ 3;
+  height: 100vh;
+  text-align: left;
+  margin: 10%;
+  margin-top: 25px;
+  padding-top: 5%;
+}
+
+#form {
+  grid-row: 5/6;
+  grid-column: 3/ 5;
+  height: 100vh;
+  text-align: center;
+  margin-top: 25px;
+  padding-top: 5%;
+}
+
+fieldset {
+  border: none;
+}
+
+.form-group {
+  padding: 15px;
+}
+
+label {
+  font-family: 'Sedgwick Ave Display';
+}
+
+input, textarea {
+  width: 35%;
+  height: 25px;
+  font-size: 15px;
+}
+
+textarea {
+  width: 35%;
+  height: 50px;
+  border: 2px, #d0d0d0, solid;
+}
+
+.btnsubmit {
+  width: 15%;
+  height: 25px;
+  background: #e1e9ee;
+  border: none;
+}
+
+.btnsubmit:hover {
+  background: black;
+  color: white;
+  border: 2px, black, solid;
+}
+
+#resume {
+  grid-row: 6/7;
+  grid-column: 1/ -1;
+  height: 100vh;
+  text-align: center;
+  background-color: #f0efef;
+  height: 100vh;
+  /* padding-top: 5%; */
+}
+
+#resume h6 {
+  margin: 25px 20px 20px 20px;
+}
+
+.resumeframe iframe, .flickrframe iframe {
+  height: 80vh;
+  width: 75vw;
+  border: none;
+}
+
+.resumeframe, .flickrframe {
+  margin: auto;
+  text-align: center;
+  border: none;
+}
+
+
+#footer {
+  background-color: black;
+  color: white;
+  grid-column: 1 / -1;
+  height: 100%;
+  grid-row: 7 / auto;
+  padding-top: 4%;
+  padding-bottom: 2%;
+  text-align: center;
+  margin-bottom: -8px;
+}
+
+#footer .socialbar {
+  color: white;
+  font-size: 30px;
+  margin: 10px;
+}
+#footer .social, #contact .social {
+  padding-top: 30px;
+}
+#footer .email a{
+  color: white;
+}
+
+#contact .socialbar {
+  color: black;
+  font-size: 30px;
+  margin: 10px;
+  margin-top: none;
+}
+#contact .email a{
+  color: black;
+}
+#contact .email {
+  margin-top: 100px;
+}
+
+
+.head p {
+  font-family: 'Sedgwick Ave Display', cursive;
+  font-size: 50px;
+  letter-spacing: 5px;
+  margin: 0;
+}
+.details p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 22px;
+  margin: 0;
+}
+
+
+#nestlanding {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  background: #ffffff url("../images/mockup.png") center center;
+  background-attachment: fixed;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
+  padding-left: 5%;
+}
+
+#wmglanding, #flickrlanding, #gdeslanding {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+}
+#wmglanding {
+  background: #ffffff url("../images/wmgbg.png") center center;
+  background-attachment: fixed;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
+  padding-left: 5%;
+}
+#flickrlanding {
+  background: #ffffff url("../images/topb.jpg") center center;
+  background-attachment: fixed;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
+  padding-left: 5%;
+}
+#gdeslanding {
+  background: #ffffff url("../images/topb.jpg") center center;
+  background-attachment: fixed;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
+  padding-left: 5%;
+}
+
+#nest1, #wmg1{
+  grid-column: 1/-1;
+  grid-row: 2/3;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+#nest2, #wmg2{
+  grid-column: 1/-1;
+  grid-row: 3/4;
+  padding-left: 5%;
+  padding-right: 5%;
+  /* height: 100vh; */
+}
+#nest3, #wmg3{
+  grid-column: 1/-1;
+  grid-row: 4/5;
+  padding-left: 5%;
+  padding-right: 5%;
+  /* height: 100vh; */
+}
+#nest4, #wmg4 {
+  grid-column: 1/-1;
+  grid-row: 5/6;
+  padding-left: 5%;
+  padding-right: 5%;
+  /* height: 100vh; */
+}
+#nest5, #wmg5 {
+  grid-column: 1/-1;
+  grid-row: 6/7;
+  padding-left: 5%;
+  padding-right: 5%;
+  /* height: 100vh; */
+}
+#nest6, #wmg6 {
+  grid-column: 1/-1;
+  grid-row: 7/8;
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 100vh;
+}
+#nest7 {
+  grid-column: 1/-1;
+  grid-row: 8/9;
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 100vh;
+}
+
+.back {
+  position: absolute;
+  top: 100px;
+}
+
+.sitemap {
+  max-height: 250px;
+  grid-row: 2/3;
+  grid-column: 3/-1;
+}
+
+.mynestp1 {
+  grid-row: 2/3;
+  grid-column: 1/3;
+}
+
+#nestfooter, #wmgfooter{
+  background-color: black;
+  color: white;
+  grid-column: 1 / -1;
+  height: 100%;
+  grid-row: 9 / auto;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  text-align: center;
+  margin-bottom: -8px;
+}
+
+
+
+/*  */
+/*  */
+
+
+
+@media screen and (max-width: 1000px) {
+p {
+  font-size: 18px;
+}
+#home h1, #home h3 {
+  font-size: 35px;
+  padding: 10px;
+}
+#home h2 {
+  font-size: 125px;
+}
+#about h3, #work h4, #contact h5, #resume h6 {
+  font-family: 'Sedgwick Ave Display', cursive;
+  font-size: 40px;
+  letter-spacing: 5px;
+  margin: 20px;
+}
+/* reformatting the grid rows */
+#maincontent {
+  grid-template-columns: 25% auto auto 25%;
+  grid-template-rows: 100vh auto auto auto auto auto 100vh auto;
+}
+#about {
+  height: 50%;
+  margin-bottom: 0;
+  padding-top: 0;
+  text-align: center;
+  grid-column: 1/-1;
+
+}
+#about-img{
+  height: auto;
+  max-width: 60vw;
+  grid-column: 1/-1;
+  grid-row: 3/ 4;
+  /* margin-top: 0; */
+  margin: auto;
+}
+#work {
+  grid-row: 4/ 5;
+}
+#work2 {
+  grid-row: 5/6;
+}
+#contact {
+  grid-row: 6/ 7;
+  grid-column: 1/ 3;
+
+  height: 50%;
+}
+#form {
+  padding: 0;
+  grid-row: 6/7;
+  grid-column: 3/ 5;
+
+  height: 50%;
+}
+#resume {
+  grid-row: 7/ 8;
+}
+#footer {
+  grid-row: 8/auto;
+}
+input, textarea {
+  width: 50%;
+  height: 25px;
+  font-size: 15px;
+}
+
+#workimg {
+min-height: 500px;
+max-height: 250px;
+overflow-y: auto;
+/* flex-flow: row-reverse; */
+flex-wrap: wrap;
+}
+#workimg > img {
+max-height: 250px;
+/* width: 50vw; */
+}
+
+
+}
+@media screen and (max-width: 600px) {
+  /* .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;} */
+  /* change grid */
+  p {
+    font-size: 16px;
+  }
+  #home h1, #home h3 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+    padding: 10px;
+  }
+  #home h2 {
+    font-size: 100px;
+  }
+  #about h3, #work h4, #contact h5, #resume h6 {
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-size: 35px;
+    letter-spacing: 5px;
+    margin: 20px;
+  }
+  #maincontent {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100vh auto auto auto auto auto auto 100vh auto;
+  }
+  #about {
+    height: 50%;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  #about-img{
+    height: 45vh;
+    width: 80vw;
+    grid-column: 1/-1;
+    grid-row: 3/ 4;
+    /* margin-top: 0; */
+    margin: auto;
+  }
+  #work {
+    grid-row: 4/ 5;
+  }
+  #work2 {
+    grid-row: 5/6;
+  }
+  #contact {
+    grid-row: 6/ 7;
+    height: 50%;
+  }
+  #form {
+    grid-row: 7/8;
+    grid-column: 1/ -1;
+    height: 50%;
+  }
+  #resume {
+    grid-row: 8/ 9;
+  }
+  #footer {
+    grid-row: 9/auto;
+  }
+
+  #workimg {
+  min-height: 500px;
+  max-height: 250px;
+  overflow-x: auto;
+  flex-flow: column-reverse;
+  flex-wrap: wrap;
+  }
+  #workimg > img {
+  max-height: 250px;
+  }
+
+
+  .resumeframe iframe {
+    /* height: auto; */
+    width: 90vw;
+    }
+
+}
+
+
+@media print {
+  img{
+    display: none;
+  }
+  .navi{
+    display: none;
+  }
+}
+
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto; /* Removes scroll animation */
+  }
+  .skipcont a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: none !important;/* Your code here - set to default setting */
+    transition: none !important;/* Your code here - set to default setting */
+    z-index: 1;
+  }
+
+  .skipcont a:focus{
+    top:0;
+  }
+
+  .scale-in-left {
+    -webkit-animation: none;
+  	        animation: none;
+  }
+
+  .nav, .nav a,  #navbutton, #maincontent{
+    transition: none;
+  }
+
+}
