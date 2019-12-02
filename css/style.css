@@ -586,7 +586,7 @@ textarea {
   padding-left: 5%;
 }
 
-#wmglanding, #flickrlanding, #gdeslanding {
+#wmglanding, #flickrlanding, #gdeslanding, #illuslanding {
   grid-column: 1/-1;
   grid-row: 1/2;
 }
@@ -612,7 +612,7 @@ textarea {
   background-repeat: no-repeat;
   padding-left: 5%;
 }
-#gdeslanding {
+#gdeslanding, #illuslanding {
   background: #ffffff url("../images/topb.jpg") center center;
   background-attachment: fixed;
   background-position: center;
