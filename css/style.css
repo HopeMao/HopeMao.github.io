@@ -29,7 +29,6 @@ font-family: 'Quicksand', sans-serif;
 #maincontent {
   display: grid;
   grid-template-columns: 25% auto auto 25%;
-  /* grid-template-rows: 1/5fr 1/5fr 1/5fr 1/5fr 1/5fr; */
   grid-template-rows: 100vh auto auto auto auto 100vh auto auto auto;
   transition: margin-left .5s;
 }
@@ -688,6 +687,10 @@ textarea {
 .mynestp1 {
   grid-row: 2/3;
   grid-column: 1/3;
+}
+
+.mynestp1 p {
+  font-size: 30px;
 }
 
 #nestfooter, #wmgfooter{
