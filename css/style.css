@@ -624,20 +624,20 @@ textarea {
   padding-left: 5%;
 }
 
-#nest1, #wmg1{
+#nest1, #wmg1, #gdes1, #illus1 {
   grid-column: 1/-1;
   grid-row: 2/3;
   padding-left: 5%;
   padding-right: 5%;
 }
-#nest2, #wmg2{
+#nest2, #wmg2, #gdes2, #illus2 {
   grid-column: 1/-1;
   grid-row: 3/4;
   padding-left: 5%;
   padding-right: 5%;
   /* height: 100vh; */
 }
-#nest3, #wmg3{
+#nest3, #wmg3, #gdes3, #illus3 {
   grid-column: 1/-1;
   grid-row: 4/5;
   padding-left: 5%;
@@ -693,12 +693,12 @@ textarea {
   font-size: 30px;
 }
 
-#nest5 .wires {
+#nest5 .wires , #gdes3 .wires, #illus3 .wires{
   display: flex;
   flex-wrap: wrap;
 }
 
-#nest5 .sections {
+#nest5 .sections, #gdes3 .sections, #illus3 .wires {
   margin: 15px;
 
 }
