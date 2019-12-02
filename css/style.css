@@ -693,6 +693,16 @@ textarea {
   font-size: 30px;
 }
 
+#nest5 .wires {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#nest5 .sections {
+  margin: 15px;
+
+}
+
 #nestfooter, #wmgfooter{
   background-color: black;
   color: white;
