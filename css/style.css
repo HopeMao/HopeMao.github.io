@@ -630,6 +630,12 @@ textarea {
   padding-left: 5%;
   padding-right: 5%;
 }
+#gdes1, #illus1 {
+  grid-column: 1/-1;
+  grid-row: 2/3;
+  padding-left: 5%;
+  padding-right: 5%;
+}
 #nest2, #wmg2, #gdes2, #illus2 {
   grid-column: 1/-1;
   grid-row: 3/4;
@@ -637,12 +643,24 @@ textarea {
   padding-right: 5%;
   /* height: 100vh; */
 }
+#gdes2, #illus2 {
+  grid-column: 1/-1;
+  grid-row: 3/4;
+  padding-left: 5%;
+  padding-right: 5%;
+}
 #nest3, #wmg3, #gdes3, #illus3 {
   grid-column: 1/-1;
   grid-row: 4/5;
   padding-left: 5%;
   padding-right: 5%;
   /* height: 100vh; */
+}
+#gdes3, #illus3 {
+  grid-column: 1/-1;
+  grid-row: 4/5;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 #nest4, #wmg4 {
   grid-column: 1/-1;
