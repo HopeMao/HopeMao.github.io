@@ -521,7 +521,7 @@ textarea {
 }
 
 
-#footer {
+#footer, #wmgfooter {
   background-color: black;
   color: white;
   grid-column: 1 / -1;
@@ -533,15 +533,15 @@ textarea {
   margin-bottom: -8px;
 }
 
-#footer .socialbar {
+#footer .socialbar , #wmgfooter .socialbar{
   color: white;
   font-size: 30px;
   margin: 10px;
 }
-#footer .social, #contact .social {
+#footer .social, #contact .social #wmgfooter .social{
   padding-top: 30px;
 }
-#footer .email a{
+#footer .email a, #wmgfooter .email a{
   color: white;
 }
 
