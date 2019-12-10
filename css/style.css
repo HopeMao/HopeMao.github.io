@@ -397,6 +397,13 @@ font-family: 'Quicksand', sans-serif;
   background-size: cover;
   background-position: center;
 }
+#workimg .img6 {
+  background: url("../images/recipeasy.png");
+  height: 300px;
+  width: 300px;
+  background-size: cover;
+  background-position: center;
+}
 
 
 #workimg a {
