@@ -592,6 +592,19 @@ textarea {
   background-repeat: no-repeat;
   padding-left: 5%;
 }
+#rplanding {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  background: #ffffff url("../images/recipeasybg.jpg") center center;
+  background-attachment: fixed;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
+  padding-left: 5%;
+}
 
 #wmglanding, #flickrlanding, #gdeslanding, #illuslanding {
   grid-column: 1/-1;
