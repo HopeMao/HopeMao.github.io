@@ -577,7 +577,7 @@ textarea {
   font-size: 22px;
   margin: 0;
 }
-
+/* https://inkplant.com/code/responsive-parallax-images */
 
 #nestlanding {
   grid-column: 1/-1;
@@ -588,6 +588,7 @@ textarea {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  background-size: 100% auto;
   height: 100vh;
   background-repeat: no-repeat;
   padding-left: 5%;
