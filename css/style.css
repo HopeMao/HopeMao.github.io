@@ -663,7 +663,7 @@ textarea {
   padding: 10%;
   text-align: right;
 }
-#nest2, #wmg2, #gdes2, #illus2 {
+#nest2, #wmg2 {
   grid-column: 2/-1;
   grid-row: 3/4;
   padding: 5%;
@@ -674,6 +674,8 @@ textarea {
   grid-row: 3/4;
   padding-left: 5%;
   padding-right: 5%;
+  text-align: center;
+  align-items: center;
 }
 #nest3head {
   grid-column: 1/-4;
@@ -681,17 +683,16 @@ textarea {
   padding: 10%;
   text-align: right;
 }
-#nest3, #wmg3, #gdes3, #illus3 {
+#nest3, #wmg3 {
   grid-column: 2/-1;
   grid-row: 4/5;
   padding: 5%;
   padding-right: 20%;
 }
 #gdes3, #illus3 {
-  grid-column: 2/-1;
+  grid-column: 1/-1;
   grid-row: 4/5;
   padding: 5%;
-  padding-right: 20%;
 }
 #nest4head {
   grid-column: 1/-4;
