@@ -589,7 +589,7 @@ textarea {
   -moz-background-size: cover;
   -o-background-size: cover;
   /* background-size: 100% auto; */
-  height: 100vh;
+  min-height: 100vh;
   background-repeat: no-repeat;
   padding-left: 5%;
 }
