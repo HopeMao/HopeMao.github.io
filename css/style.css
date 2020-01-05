@@ -689,6 +689,7 @@ textarea {
   padding: 5%;
   padding-right: 20%;
 }
+
 #gdes3, #illus3 {
   grid-column: 1/-1;
   grid-row: 4/5;
@@ -753,10 +754,11 @@ textarea {
   top: 150px;
 }
 
-.sitemap {
+.sitemap, .gallery {
   max-height: 250px;
   grid-row: 2/3;
   grid-column: 3/-1;
+  max-width: 90vw;
 }
 
 .mynestp1 {
@@ -879,8 +881,15 @@ max-height: 250px;
 /* width: 50vw; */
 }
 
-
+#nest1, #wmg1, #gdes1, #illus1 {
+  grid-column: 1/-1;
+  grid-row: 2/3;
+  padding: 5%;
+  text-align: center;
 }
+}
+
+
 @media screen and (max-width: 600px) {
   /* .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;} */
@@ -903,7 +912,7 @@ max-height: 250px;
     margin: 20px;
   }
   #maincontent {
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 20% 80%;
     grid-template-rows: 100vh auto auto auto auto auto auto 100vh auto;
   }
   #about {
@@ -952,11 +961,79 @@ max-height: 250px;
   max-height: 250px;
   }
 
+  #nest2head {
+    grid-column: 1/-2;
+    grid-row: 3/4;
+    padding: 10%;
+    text-align: right;
+  }
+  #nest2, #wmg2 {
+    grid-column: 2/-1;
+    grid-row: 3/4;
+    padding: 5%;
+    padding-left: 8%;
+    padding-right: 5%;
+  }
+  #nest3head {
+    grid-column: 1/-2;
+    grid-row: 4/5;
+    padding: 10%;
+    text-align: right;
+  }
+  #nest3, #wmg3 {
+    grid-column: 2/-1;
+    grid-row: 4/5;
+    padding: 5%;
+    padding-left: 8%;
+    padding-right: 5%;
+  }
+  #nest4head {
+    grid-column: 1/-2;
+    grid-row: 5/6;
+    padding: 10%;
+    text-align: right;
+  }
+  #nest4, #wmg4 {
+    grid-column: 2/-1;
+    grid-row: 5/6;
+    padding: 5%;
+    padding-left: 8%;
+    padding-right: 5%;
+  }
+  #nest5head {
+    grid-column: 1/-2;
+    grid-row: 6/7;
+    padding: 10%;
+    text-align: right;
+  }
+  #nest5, #wmg5 {
+    grid-column: 1/-1;
+    grid-row: 7/8;
+    padding: 5%;
+    padding-left: 8%;
+    padding-right: 5%;
+    height: auto;
+  }
+  #nest6, #wmg6 {
+    grid-column: 1/-1;
+    grid-row: 7/8;
+    padding-left: 8%;
+    padding-right: 5%;
+    height: 100vh;
+  }
+  .sitemap {
+    max-width: 74vw;
+  }
+  .gallery {
+    max-height: none;
+    max-width: 85vw;
+  }
 
   .resumeframe iframe {
-    /* height: auto; */
-    width: 90vw;
-    }
+  /* height: auto; */
+  width: 90vw;
+  }
+
 
 }
 
