@@ -588,7 +588,6 @@ textarea {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: 100% auto;
   min-height: 100vh;
   min-width: 100vh;
   background-repeat: no-repeat;
